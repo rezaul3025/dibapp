@@ -1,4 +1,5 @@
 from dib_api.settings.common import  *
+import os
 
 DEBUG = True
 
@@ -9,10 +10,10 @@ HOST = 'https://prayer.darulihsan-berlin.com'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dib_api',
-        'USER': 'dibevents',
-        'PASSWORD': '@Akm8@cwp9*',
-        'HOST': '160.153.155.4',
+        'NAME': os.environ['DATABASE_NAME'],
+        'USER': os.environ['DATABASE_USER'],
+        'PASSWORD': os.environ['DATABASE_PASS'],
+        'HOST': os.environ['DATABASE_HOST'],
         'PORT': '3306',
         'OPTIONS': {'charset': 'utf8mb4'},
         'TIME_ZONE': 'Europe/Berlin',
