@@ -1,4 +1,4 @@
-from dib_events.settings.common import  *
+from dib_api.settings.common import  *
 
 DEBUG = True
 

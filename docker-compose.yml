@@ -1,0 +1,28 @@
+version: "3"
+services:
+  db:
+    image: mysql:latest
+    container_name: dev_mysql
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=dib_api
+      - MYSQL_USER=dib_api
+      - MYSQL_PASSWORD=dib_api
+      - MYSQL_ROOT_HOST=%
+  web:
+    build: .
+    entrypoint: [ "/bin/sh","-c" ]
+    command:
+      - |
+        python manage.py migrate
+        python manage.py runserver 0.0.0.0:9000
+    volumes:
+      - .:/app
+    ports:
+      - "9000:9000"
+    depends_on:
+      - db

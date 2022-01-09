@@ -1,4 +1,4 @@
-from dib_events.settings.common import  *
+from dib_api.settings.common import  *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -10,13 +10,13 @@ HOST = 'http://127.0.0.1:8000'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dib_events',
-        'USER': 'dib_events',
-        'PASSWORD': 'dib_events',
-        'HOST': '127.0.0.1',
+        'NAME': 'dib_api',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'HOST': 'dev_mysql',
         'PORT': '3306',
         'OPTIONS': {'charset': 'utf8mb4'},
-        'TIME_ZONE': 'Europe/Berlin',
+        #'TIME_ZONE': 'Europe/Berlin',
     }
 }
 

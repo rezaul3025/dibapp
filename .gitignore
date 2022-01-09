@@ -163,3 +163,5 @@ npm-debug.log
 /venvp3/
 /qrcode/
 /backend/qrcode/
+/migrations/
+/apiapp/migrations/

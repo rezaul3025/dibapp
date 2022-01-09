@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8d1l+o$x7a=%svlwg_s5r+6hr%mejq$m(0m++#%hh4r-x$31lv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dibevents.pythonanywhere.com','localhost','127.0.0.1','0.0.0.0', 'prayer.darulihsan-berlin.com']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
      'rest_framework',
+    'apiapp',
 ]
 
 MIDDLEWARE = [
