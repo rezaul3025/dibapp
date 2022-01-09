@@ -9,7 +9,7 @@ HOST = 'https://prayer.darulihsan-berlin.com'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dibevents',
+        'NAME': 'dib_api',
         'USER': 'dibevents',
         'PASSWORD': '@Akm8@cwp9*',
         'HOST': '160.153.155.4',
