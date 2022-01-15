@@ -11,9 +11,9 @@ urlpatterns = [
 
     path('api/v1/users/', user.register, name='register'),
 
-    path(r'^api/v1/signup', UserRegistrationView.as_view()),
+    path('api/v1/signup', UserRegistrationView.as_view()),
 
-    path(r'^api/v1/signin', UserLoginView.as_view()),
+    path('api/v1/signin', UserLoginView.as_view()),
 
     path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh'),
