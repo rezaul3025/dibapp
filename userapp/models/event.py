@@ -1,8 +1,8 @@
 from django.db import models
 from django.conf import settings
 
-from apiapp.models.event_type import EventType
-from apiapp.models.user import User
+from userapp.models.event_type import EventType
+from userapp.models.user import User
 
 class Event(models.Model):
     internal_id = models.AutoField(primary_key = True)

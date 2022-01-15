@@ -164,4 +164,4 @@ npm-debug.log
 /qrcode/
 /backend/qrcode/
 /migrations/
-/apiapp/migrations/
+/userapp/migrations/

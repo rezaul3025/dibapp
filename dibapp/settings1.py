@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8d1l+o$x7a=%svlwg_s5r+6hr%mejq$m(0m++#%hh4r-x$31lv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dibevents.pythonanywhere.com','localhost','127.0.0.1','0.0.0.0', 'prayer.darulihsan-berlin.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,8 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'rest_framework',
-    'apiapp',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'dib_api.urls'
+ROOT_URLCONF = 'dibapp.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'dib_api.wsgi.application'
+WSGI_APPLICATION = 'dibapp.wsgi.application'
 
 
 # Database

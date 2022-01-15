@@ -1,4 +1,4 @@
-from dib_api.settings.common import  *
+from dibapp.settings.common import  *
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -6,6 +6,8 @@ DEBUG = True
 SUMMER_TIME_DIF = 0
 
 HOST = 'http://127.0.0.1:8000'
+
+TIME_ZONE : 'Europe/Berlin'
 
 DATABASES = {
     'default': {

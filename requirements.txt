@@ -2,9 +2,6 @@ Django==4.0.1
 mysqlclient
 djangorestframework
 django-rest-knox
-django-pagination==1.0.7
-Pillow==8.0.1
-qrcode[pil]
-reportlab==3.5.59
-pytz
--- NOTE: install without sudo 
+django-pagination
+djangorestframework_simplejwt
+-- NOTE: install without sudo

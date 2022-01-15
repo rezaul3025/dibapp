@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from apiapp.models.user import User
-from apiapp.models.event import Event
-from apiapp.models.event_type import EventType
+from userapp.models.user import User
+from userapp.models.event import Event
+from userapp.models.event_type import EventType
 
 
 # Register your models here.

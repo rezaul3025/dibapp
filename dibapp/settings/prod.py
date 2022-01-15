@@ -1,4 +1,4 @@
-from dib_api.settings.common import  *
+from dibapp.settings.common import  *
 import os
 
 DEBUG = True

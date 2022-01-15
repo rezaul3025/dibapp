@@ -9,4 +9,4 @@ RUN apk update && apk add python3 python3-dev  mariadb-dev build-base gcc libc-d
 RUN apk add netcat-openbsd
 
 
-RUN pip install -r requirements1.txt
+RUN pip install -r requirements.txt
