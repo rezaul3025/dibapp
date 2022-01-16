@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
 
+from userapp.models.role import Role
 from userapp.models.user import User
 
 class UserProfile(models.Model):
@@ -8,7 +9,8 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     first_name = models.CharField(max_length=100, unique=False)
     last_name = models.CharField(max_length=100, unique=False)
-    phone_number = models.CharField(max_length=10, unique=True, null=False, blank=False)
+    phone_number = models.CharField(max_length=10, unique=False, null=False, blank=False)
+    roles = models.ManyToManyField(Role)
 
     class Meta:
         '''
