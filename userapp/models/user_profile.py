@@ -10,7 +10,15 @@ class UserProfile(models.Model):
     first_name = models.CharField(max_length=100, unique=False)
     last_name = models.CharField(max_length=100, unique=False)
     phone_number = models.CharField(max_length=10, unique=False, null=False, blank=False)
-    roles = models.ManyToManyField(Role)
+    MEMBER = 1
+    GUEST = 2
+    ADMIN = 3
+    ROLE_CHOICES = (
+        (MEMBER, 'member'),
+        (GUEST, 'guest'),
+        (ADMIN, 'admin'),
+    )
+    role = models.IntegerField(choices=ROLE_CHOICES, editable=True, default=1)
 
     class Meta:
         '''

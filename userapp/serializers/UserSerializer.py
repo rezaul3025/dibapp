@@ -13,7 +13,7 @@ from userapp.models.user_profile import UserProfile
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserProfile
-        fields = ('first_name', 'last_name', 'phone_number', 'roles')
+        fields = ('first_name', 'last_name', 'phone_number', 'role')
 
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
@@ -27,20 +27,13 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         profile_data = validated_data.pop('profile')
         user = User.objects.create_user(**validated_data)
-        user_profile = {"user": user,
-                        "first_name": profile_data['first_name'],
-                        "last_name": profile_data['last_name'],
-                        "phone_number": profile_data['phone_number'],
-                        "roles": profile_data['roles']}
-        userProfle = UserProfile(
+        UserProfile.objects.create(
             user=user,
             first_name=profile_data['first_name'],
             last_name=profile_data['last_name'],
-            phone_number=profile_data['phone_number']
+            phone_number=profile_data['phone_number'],
+            role=profile_data['role']
         )
-        userProfle.roles.add(profile_data['roles'])
-        print(userProfle.roles)
-        userProfle.save()
         return user
 
 
