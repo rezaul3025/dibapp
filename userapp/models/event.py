@@ -13,6 +13,6 @@ class Event(models.Model):
     users = models.ManyToManyField(User)
 
     def __str__(self):
-        return f"{self.event.title}, {self.title},{self.description},{self.date.strftime(settings.DATETIME_FORMAT)}"
+        return f"{self.type}, {self.title},{self.description},{self.date.strftime(settings.DATETIME_FORMAT)}"
     class Meta:
         db_table = "event"

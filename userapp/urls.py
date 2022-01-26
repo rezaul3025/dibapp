@@ -4,12 +4,15 @@ from userapp.api import user
 from django.views.decorators.csrf import csrf_exempt
 from userapp.api.user import UserRegistrationView
 from userapp.api.user import UserLoginView
+from userapp.api.event import EventDetails
 from rest_framework_simplejwt import views as jwt_views
 
 urlpatterns = [
     path('api/v1/events/', event.events, name='events'),
 
     path('api/v1/users/', user.register, name='register'),
+
+    path('events/<str:userId>/', EventDetails.as_view()),
 
     path('api/v1/signup', UserRegistrationView.as_view()),
 

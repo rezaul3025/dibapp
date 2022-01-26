@@ -7,11 +7,12 @@ from userapp.models.event_type import EventType
 
 # Register your models here.
 class UserAdmin(admin.ModelAdmin):
-    pass
+   fields = ['email', 'is_active','is_staff','is_superuser']
+    
 admin.site.register(User, UserAdmin)
 
 class EventAdmin(admin.ModelAdmin):
-    pass
+    fields = ['title', 'description','date','type','users']
 admin.site.register(Event, EventAdmin)
 
 class EventTypeAdmin(admin.ModelAdmin):
