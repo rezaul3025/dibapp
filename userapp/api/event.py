@@ -18,7 +18,7 @@ class EventDetails(APIView):
 
     def get(self, request, userId, format=None):
         user = User.objects.get(email__iexact=userId)
-        events = Event.objects.filter(users__in = user)
+        events = Event.objects.filter(users = user)
         serializer = EventSerializer(events, many=True)
         return Response(serializer.data)
 
